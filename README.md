@@ -36,6 +36,7 @@ Create a Console application:
 ```console
 dotnet new console -o MyFirstWapcModule
 cd MyFirstWapcModule
+dotnet add package Wasi.Sdk --prerelease
 dotnet add package WapcGuest
 ```
 
@@ -56,7 +57,8 @@ static byte[] callHost(byte[] payload)
   var hostResponseBytes = Wapc.HostCall(binding, wapcNamespace, operation, payloadGuestBytes);
   var hostResponse = Encoding.UTF8.GetString(hostResponseBytes);
 
-  string response = $"the host responded with
+  string response = $"the host responded with {hostResponse}";
+  var responseBytes = Encoding.UTF8.GetBytes(response);
 
   return responseBytes;
 }
