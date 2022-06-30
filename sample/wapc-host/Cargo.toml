@@ -1,0 +1,12 @@
+[package]
+name = "wapc-host"
+version = "0.1.0"
+authors = ["Flavio Castelli <fcastelli@suse.com>"]
+edition = "2021"
+
+[dependencies]
+wapc = "1.0.0"
+wasmtime-provider = "1.0.1"
+whoami = "1.2.1"
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
