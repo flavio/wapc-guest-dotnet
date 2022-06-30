@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Wasi.Sdk" Version="0.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Only needed when referencing the dependencies as projects. For package references, these are imported automatically. -->
+    <ProjectReference Include="..\..\src\wapc-guest\wapc-guest.csproj" />
+  </ItemGroup>
+
+  <!-- Only needed when referencing the dependencies as projects. For package references, these are imported automatically. -->
+  <Import Project="..\..\src\wapc-guest\build\WapcGuest.targets" />
+
+</Project>
