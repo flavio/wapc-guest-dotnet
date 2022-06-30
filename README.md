@@ -36,7 +36,7 @@ Create a Console application:
 ```console
 dotnet new console -o MyFirstWapcModule
 cd MyFirstWapcModule
-dotnet add package wapc-guest
+dotnet add package WapcGuest
 ```
 
 Edit the `Program.cs` file and replace its contents to match the following ones:

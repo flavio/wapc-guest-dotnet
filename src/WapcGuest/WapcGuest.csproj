@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
-    <PackageId>wapc-guest</PackageId>
+    <PackageId>WapcGuest</PackageId>
     <Version>0.1.0</Version>
     <Authors>Flavio Castelli</Authors>
   </PropertyGroup>

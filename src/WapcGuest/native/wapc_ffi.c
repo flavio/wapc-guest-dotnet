@@ -41,7 +41,7 @@ __attribute__((export_name("__guest_call"))) bool __guest_call(size_t operation_
 {
   if (!method_HandleGuestCall)
   {
-    method_HandleGuestCall = lookup_dotnet_method("wapc-guest.dll", "WapcGuest", "Interop", "HandleGuestCall", -1);
+    method_HandleGuestCall = lookup_dotnet_method("WapcGuest.dll", "WapcGuest", "Interop", "HandleGuestCall", -1);
     assert(method_HandleGuestCall);
   }
 
