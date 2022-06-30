@@ -5,7 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <PackageId>wapc-guest</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Flavio Castelli</Authors>
   </PropertyGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Wasi.Sdk" Version="0.1.1" />
@@ -13,6 +18,11 @@
 
   <ItemGroup>
     <UpToDateCheckInput Include="native\*.c" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Add README.md to nuget gallery -->
+    <None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
   <Import Project="build\WapcGuest.targets" />
